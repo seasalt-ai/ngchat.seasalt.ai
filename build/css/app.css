@@ -9672,7 +9672,7 @@ button:focus {
 }
 
 .ngchat-container {
-  background-image: url(../../images/header-background.png);
+  background-image: url(../images/header-background.png);
   background-position: top 220px right calc(100% - 12px);
   background-repeat: no-repeat;
   background-size: 200%;
@@ -9898,7 +9898,7 @@ button:focus {
 
 @media (min-width: 768px) {
   .production {
-    background-image: url(../../images/production-background.png);
+    background-image: url(../images/production-background.png);
     background-position: bottom 40px left -130px;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -9948,7 +9948,7 @@ button:focus {
 
 @media (min-width: 768px) {
   .customer {
-    background-image: url(../../images/customer-background.png);
+    background-image: url(../images/customer-background.png);
     background-position: bottom 0 left 0;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -9991,7 +9991,7 @@ button:focus {
 
 @media (min-width: 768px) {
   .why-nextgen {
-    background-image: url(../../images/nextgen-background.png);
+    background-image: url(../images/nextgen-background.png);
     background-position: bottom 0 left 0;
     background-repeat: no-repeat;
     background-size: 100%;

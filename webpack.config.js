@@ -60,7 +60,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../../',
+              publicPath: '../',
               hmr: process.env.NODE_ENV === 'development'
             }
           },
