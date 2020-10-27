@@ -1,0 +1,670 @@
+@import '~bootstrap';
+@import './common/mixin';
+@import './common/function';
+
+$primary-color: #19b9c3;
+$secondary-color: #2dd3c4;
+$tertiary-color: #40ebc4;
+$fourth-color: #37558f;
+$list-text-color: #1e2d4c;
+
+html,
+body {
+  font-family: Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  font-size: 16px;
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 20px;
+  }
+}
+
+button:focus {
+  outline: 0;
+}
+
+@include block(ngchat-container) {
+  background-image: url('../images/header-background.png');
+  background-position: top 220px right calc(100% - 12px);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  overflow: hidden;
+  padding-top: 50px;
+  @include media-breakpoint-up(md) {
+    background-position: top -40px right 150%;
+    background-size: 150%;
+    padding-top: 0;
+  }
+}
+
+@include block(ngchat-button) {
+  background: #fff;
+  border: 1px solid $primary-color;
+  border-radius: 20px;
+  color: $primary-color;
+  padding: 3px 11px;
+  @include modifier(small) {
+    // font-size: 12px;
+    font-size: 0.75rem;
+  }
+  @include modifier(call-to-action) {
+    border-radius: 25px;
+    // font-size: 22px;
+    font-size: 1.375rem;
+    padding: 5px 25px;
+  }
+  @include modifier(active) {
+    background-image: linear-gradient(to right, $tertiary-color, $primary-color);
+    border: 1px solid transparent;
+    color: #fff;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right, $tertiary-color, $primary-color);
+    border: 1px solid transparent;
+    color: #fff;
+  }
+}
+
+@include block(ngchat-navbar) {
+  background: #fff;
+  left: 0;
+  padding: 12px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  @include media-breakpoint-up(md) {
+    background: transparent;
+    padding: 12px 70px;
+    position: static;
+  }
+  @include element(logo) {
+    left: 50%;
+    max-height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @include media-breakpoint-up(md) {
+      position: static;
+      transform: translate(0, 0);
+    }
+  }
+  @include element(button) {
+    @include media-breakpoint-up(md) {
+      background-image: linear-gradient(to right, $tertiary-color, $primary-color);
+      border: 1px solid transparent;
+      color: #fff;
+    }
+  }
+  @include element(menu) {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    margin-left: 40px;
+    margin-right: 10px;
+    padding: 0;
+  }
+  @include element(menu-item) {
+    padding-right: 30px;
+    @include modifier(no-padding) {
+      padding-right: 0;
+    }
+  }
+  @include element(divider) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include element(link) {
+    color: #000;
+    // font-size: 12px;
+    font-size: 0.75rem;
+    @include modifier(active) {
+      color: $primary-color;
+    }
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+@include block(humber-button) {
+  background-image: url('../images/icon-menu.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+
+  @include modifier(active) {
+    background-image: url('../images/icon-close.png');
+  }
+}
+
+@include block(page-header) {
+  padding-bottom: 400px;
+  padding-left: 20px;
+  position: relative;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    padding-left: 85px;
+  }
+  @include media-breakpoint-up(md) {
+    width: 40%;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 500px;
+  }
+  @include element(title) {
+    // font-size: 28px;
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+    margin-top: 43px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      margin-top: 70px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 160px;
+    }
+  }
+  @include element(description) {
+    // font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+}
+
+@include block(ngchat-list) {
+  color: $list-text-color;
+  display: inline-block;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0;
+  @include element(item) {
+    display: flex;
+
+    &::before {
+      background-image: url('../images/ic-check.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 16px auto;
+      content: '';
+      display: block;
+      flex: 0 0 16px;
+      height: 16px;
+      margin-right: 12px;
+      margin-top: 4px;
+      width: 16px;
+    }
+  }
+}
+
+@include block(page-container) {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@include block(production) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 90px;
+  @include media-breakpoint-up(md) {
+    background-image: url('../images/production-background.png');
+    background-position: bottom 40px left -130px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  @include media-breakpoint-only(md) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    padding-bottom: 180px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: 125px;
+    padding-right: 125px;
+  }
+  @include element(card) {
+    margin-bottom: 55px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      max-width: 20vw;
+      min-width: 250px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include block(customer) {
+  margin-bottom: 120px;
+  @include media-breakpoint-up(md) {
+    background-image: url('../images/customer-background.png');
+    background-position: bottom 0 left 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  @include media-breakpoint-up(md) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  @include element(item) {
+    padding-bottom: 56px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 100px;
+      text-align: left;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  @include element(list) {
+    margin: 27px 0 19px;
+    text-align: left;
+  }
+}
+
+@include block(why-nextgen) {
+  margin-bottom: 75px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include media-breakpoint-up(md) {
+    background-image: url('../images/nextgen-background.png');
+    background-position: bottom 0 left 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  @include media-breakpoint-up(md) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  @include element(title) {
+    margin-bottom: 58px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+  @include element(sub-title) {
+    margin-bottom: 27px;
+    margin-top: 20px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
+  @include element(item) {
+    padding-bottom: 50px;
+    @include media-breakpoint-up(md) {
+      align-items: center;
+      display: flex;
+      @include modifier(1) {
+        padding-left: 10%;
+      }
+      @include modifier(2) {
+        padding-left: 25%;
+      }
+      @include modifier(3) {
+        padding-left: 40%;
+      }
+      @include modifier(4) {
+        padding-left: 55%;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  @include element(information) {
+    @include media-breakpoint-up(md) {
+      margin-left: 40px;
+    }
+  }
+  @include element(image) {
+    margin: 0 auto;
+    min-width: 100px;
+    width: 100px;
+
+    img {
+      min-width: 100px;
+      width: 100px;
+    }
+  }
+  @include element(image) {
+    @include media-breakpoint-up(md) {
+      margin: 0;
+      min-width: 90px;
+      width: 90px;
+
+      img {
+        min-width: 90px;
+        width: 90px;
+      }
+    }
+  }
+}
+
+@include block(partners) {
+  background: #e9ecf2;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 16px;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 50px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 50px;
+  }
+  @include element(title) {
+    color: $fourth-color;
+    // font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 50px;
+    }
+  }
+  @include element(image) {
+    text-align: center;
+
+    img {
+      max-height: 28px;
+      @include media-breakpoint-up(md) {
+        max-height: 30px;
+      }
+      @include media-breakpoint-up(lg) {
+        max-height: 40px;
+      }
+      @include media-breakpoint-up(xl) {
+        max-height: 50px;
+      }
+    }
+  }
+}
+
+@include block(mb-30px) {
+  margin-bottom: 30px;
+}
+
+@include block(contact-us) {
+  overflow: hidden;
+  padding: 70px 27px;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    padding: 200px 60px;
+  }
+  @include element(form) {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 20px 0 rgba(88, 78, 78, 0.16);
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 36px 25px 34px;
+    position: relative;
+    z-index: 10;
+  }
+  @include element(description) {
+    margin-bottom: 24px;
+    padding: 0 35px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 50px;
+    }
+  }
+  @include element(form-group) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
+
+    .error-message {
+      padding-top: 6px;
+    }
+  }
+  @include element(row) {
+    @include media-breakpoint-up(md) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+  @include element(button) {
+    padding: 8px 18px;
+  }
+
+  &::after {
+    background-image: radial-gradient(#7fbacd 20%, #e7f2f8 80%, #fff 100%);
+    border-radius: 250%;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 250%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 80%);
+    width: 250%;
+    z-index: 1;
+  }
+}
+
+@include block(ngchat-card) {
+  background: #fff;
+  border-radius: 20px;
+  border-top: 30px solid #fff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 35px;
+  text-align: center;
+  width: 100%;
+  @include element(icon) {
+    margin-bottom: 23px;
+    width: 118px;
+  }
+  @include element(title) {
+    font-weight: normal;
+    margin-bottom: 12px;
+  }
+  @include element(description) {
+    margin-bottom: 48px;
+  }
+  @include element(status) {
+    color: #777;
+    // font-size: 20px;
+    font-size: 1.25rem;
+  }
+  @include modifier(primary) {
+    border-top-color: $primary-color;
+  }
+  @include modifier(secondary) {
+    border-top-color: $secondary-color;
+  }
+  @include modifier(tertiary) {
+    border-top-color: $tertiary-color;
+  }
+}
+
+@include block(ngchat-title) {
+  // font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  @include modifier(primary) {
+    color: $primary-color;
+  }
+}
+
+@include block(ngchat-highlight-title) {
+  color: #ee7b1d;
+  // font-size: 40px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+@include block(ngchat-description) {
+  color: #777;
+}
+
+@include block(ngchat-image) {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+@include block(ngchat-input) {
+  border: 1px solid #777;
+  border-radius: 30px;
+}
+
+@include block(ngchat-select) {
+  border: 1px solid #777;
+  border-radius: 30px;
+  position: relative;
+  @include element(label) {
+    padding-left: 0.75rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    background-image: url('../images/icon-arrow-down.png');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    content: '';
+    display: inline-block;
+    height: 7px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+  }
+
+  select {
+    opacity: 0;
+  }
+}
+
+@include block(ngchat-primary-text) {
+  color: $primary-color;
+  margin-bottom: 0;
+}
+
+@include block(error-message) {
+  color: #db3a20;
+  // font-size: 12px;
+  font-size: 0.75rem;
+}
+
+@include block(menu) {
+  background: #fff;
+  height: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  padding: 0 23px;
+  position: fixed;
+  top: 50px;
+  transform: translateX(-100%);
+  transition: all ease-in-out 0.5s;
+  width: 100%;
+  z-index: 999;
+
+  @include element(header) {
+    padding: 40px 0;
+  }
+  @include element(item) {
+    border-bottom: 1px solid #777;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  @include element(button) {
+    padding: 6px 22px;
+  }
+  @include element(link) {
+    color: #000;
+    // font-size: 22px;
+    font-size: 1.375rem;
+    @include modifier(active) {
+      color: $primary-color;
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+  @include modifier(show) {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@include block(point-decorations) {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  @include element(item) {
+    background: #3895c6;
+    border-radius: 10px;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px;
+    @include media-breakpoint-up(lg) {
+      height: 15px;
+      width: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(1) {
+      opacity: 0.5;
+    }
+
+    &:nth-child(2) {
+      opacity: 0.25;
+    }
+  }
+}
+
+.calendly-inline-widget {
+  height: 580px;
+  min-width: 320px;
+}
+
+.modal-dialog,
+.modal.show .modal-dialog {
+  top: 50%;
+  transform: translateY(-50%);
+}
