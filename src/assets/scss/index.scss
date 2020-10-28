@@ -56,13 +56,13 @@ button:focus {
   }
   @include modifier(active) {
     background-image: linear-gradient(to right, $tertiary-color, $primary-color);
-    border: 1px solid transparent;
+    border: 0;
     color: #fff;
   }
 
   &:hover {
     background-image: linear-gradient(to right, $tertiary-color, $primary-color);
-    border: 1px solid transparent;
+    border: 0;
     color: #fff;
   }
 }
@@ -94,7 +94,7 @@ button:focus {
   @include element(button) {
     @include media-breakpoint-up(md) {
       background-image: linear-gradient(to right, $tertiary-color, $primary-color);
-      border: 1px solid transparent;
+      border: 0;
       color: #fff;
     }
   }
