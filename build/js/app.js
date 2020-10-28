@@ -11028,8 +11028,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     errorPlacement: function errorPlacement(error, element) {
-      console.log(element);
-
       if (element.attr('name') === 'country') {
         error.insertAfter(element.parent());
       } else {
