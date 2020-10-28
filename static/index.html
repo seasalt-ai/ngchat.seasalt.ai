@@ -481,7 +481,7 @@
         </div>
       </div>
       <div class="page-container contact-us">
-        <form class="contact-us__form">
+        <form id="userForm" class="contact-us__form">
           <div class="form-row">
             <div class="col-12 d-md-flex">
               <div class="ngchat-title ngchat-title--primary text-center">
@@ -502,6 +502,7 @@
                   type="text"
                   class="form-control ngchat-input"
                   id="inputName"
+                  name="name"
                 />
               </div>
             </div>
@@ -512,8 +513,8 @@
                 >
                 <div class="ngchat-select">
                   <div class="ngchat-select__label"></div>
-                  <select id="selectCountry" class="form-control">
-                    <option>Please select</option>
+                  <select id="selectCountry" name="country" class="form-control">
+                    <option value="">Please select</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -851,10 +852,8 @@
                   type="email"
                   class="form-control ngchat-input"
                   id="inputEmail"
+                  name="email"
                 />
-                <span class="error-message"
-                  >*Please enter a valid company email.</span
-                >
               </div>
             </div>
           </div>

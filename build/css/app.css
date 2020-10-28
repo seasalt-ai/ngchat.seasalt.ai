@@ -10190,6 +10190,7 @@ button:focus {
 }
 
 .contact-us__form-group .error-message {
+  margin: 0;
   padding-top: 6px;
 }
 
