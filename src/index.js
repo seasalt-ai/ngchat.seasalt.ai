@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     errorClass: 'error-message',
     errorElement: 'span',
+    onkeyup: function (element) { $(element).valid() },
     submitHandler: function (form) {
       // some other code
       // maybe form submit or ajax

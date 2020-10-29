@@ -11039,6 +11039,9 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     errorClass: 'error-message',
     errorElement: 'span',
+    onkeyup: function onkeyup(element) {
+      $(element).valid();
+    },
     submitHandler: function submitHandler(form) {// some other code
       // maybe form submit or ajax
     }
