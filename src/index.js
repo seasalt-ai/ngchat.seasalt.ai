@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
   })
   $(document).on('click', '#openCalendlyModal', function (event) {
     event.preventDefault()
+    if ($('form').valid()) {
+      $("#calendlyModal").modal('show')
+    }
   })
 
   const $label = $('.ngchat-select').find('.ngchat-select__label')
