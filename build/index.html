@@ -53,14 +53,14 @@
             <li
               class="ngchat-navbar__menu-item ngchat-navbar__menu-item--no-padding"
             >
-              <a class="ngchat-navbar__link" href="#">CONTACT US</a>
+              <a class="ngchat-navbar__link ngchat-navbar__link--light" href="#">CONTACT US</a>
             </li>
-            <li class="ngchat-navbar__divider">|</li>
+            <li class="ngchat-navbar__divider ngchat-navbar__divider--light">|</li>
             <li
               class="ngchat-navbar__menu-item ngchat-navbar__menu-item--no-padding"
             >
               <a
-                class="ngchat-navbar__link ngchat-navbar__link--active"
+                class="ngchat-navbar__link ngchat-navbar__link--light"
                 href="#"
                 >LOG IN</a
               >
@@ -112,59 +112,76 @@
         </button>
       </header>
       <div class="page-container production">
-        <div class="ngchat-card ngchat-card--primary production__card">
-          <img
-            class="ngchat-card__icon"
-            src="./images/ic-dialogue.png"
-            alt="ngChat Dialogue"
-          />
-          <div class="ngchat-card__title ngchat-title">ngChat Dialogue</div>
-          <div class="ngchat-card__description ngchat-description">
-            next-gen chat solution for the future of contact center
+        <div class="ngchat-card ngchat-card--primary production__card d-flex flex-column justify-content-between">
+          <div>
+            <img
+              class="ngchat-card__icon"
+              src="./images/ic-dialogue.png"
+              alt="ngChat Dialogue"
+            />
+            <div class="ngchat-card__title ngchat-title">ngChat Dialogue</div>
+            <div class="ngchat-card__description ngchat-description">
+              Neural multi-turn dialogue solution that observes and controls conversation between your brand and your customers.
+            </div>
           </div>
-          <button class="ngchat-button">DEMO</button>
+          <div>
+            <button class="ngchat-button ngchat-card__button">DEMO</button>
+          </div>
         </div>
         <div class="point-decorations d-none d-lg-flex">
           <i class="point-decorations__item"></i>
           <i class="point-decorations__item"></i>
           <i class="point-decorations__item"></i>
         </div>
-        <div class="ngchat-card ngchat-card--secondary production__card">
-          <img
-            class="ngchat-card__icon"
-            src="./images/ic-tts.png"
-            alt="ngChat Dialogue"
-          />
-          <div class="ngchat-card__title ngchat-title">ngChat TTS</div>
-          <div class="ngchat-card__description ngchat-description">
-            next-gen chat solution for the future of contact center
+        <div class="ngchat-card ngchat-card--secondary production__card d-flex flex-column justify-content-between">
+          <div>
+            <img
+              class="ngchat-card__icon"
+              src="./images/ic-tts.png"
+              alt="ngChat Dialogue"
+            />
+            <div class="ngchat-card__title ngchat-title">ngChat TTS</div>
+            <div class="ngchat-card__description ngchat-description">
+              Neural Text-To-Speech solution that gives your brand a dedicated voice.
+            </div>
           </div>
-          <button class="ngchat-button">GET STARTED</button>
+          <div>
+            <button class="ngchat-button ngchat-card__button">GET STARTED</button>
+          </div>
         </div>
         <div class="point-decorations d-none d-lg-flex">
           <i class="point-decorations__item"></i>
           <i class="point-decorations__item"></i>
           <i class="point-decorations__item"></i>
         </div>
-        <div class="ngchat-card ngchat-card--tertiary production__card">
-          <img
-            class="ngchat-card__icon"
-            src="./images/ic-stt.png"
-            alt="ngChat Dialogue"
-          />
-          <div class="ngchat-card__title ngchat-title">ngChat STT</div>
-          <div class="ngchat-card__description ngchat-description">
-            next-gen chat solution for the future of contact center
+        <div class="ngchat-card ngchat-card--tertiary production__card d-flex flex-column justify-content-between">
+          <div>
+            <img
+              class="ngchat-card__icon"
+              src="./images/ic-stt.png"
+              alt="ngChat Dialogue"
+            />
+            <div class="ngchat-card__title ngchat-title">ngChat STT</div>
+            <div class="ngchat-card__description ngchat-description">
+              Neural Speech-To-Text solution that authentically transcribes your customers’ voice.
+            </div>
           </div>
-          <span class="ngchat-card__status">COMMING SOON...</span>
+          <div>
+            <span class="ngchat-card__status">COMMING SOON...</span>
+          </div>
         </div>
       </div>
       <div class="page-container customer">
         <div class="row">
+          <div class="col-12">
+            <div class="customer__title">Future of Contact Center</div>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-12 customer__item">
             <div class="row no-gutters align-items-md-center">
               <div class="col-12 col-md-8">
-                <div class="ngchat-title ngchat-title--primary">Customer</div>
+                <div class="ngchat-title ngchat-title--primary">Cross-channel Customers</div>
                 <ul class="ngchat-list customer__list">
                   <li class="ngchat-list__item">
                     <span>Web/mobile focus</span>
@@ -189,7 +206,7 @@
                 </ul>
               </div>
               <div class="col-12 col-md-4">
-                <div class="ngchat-image">
+                <div class="ngchat-image customer__image">
                   <img
                     src="./images/customer.png"
                     alt="Customer"
@@ -226,9 +243,9 @@
                 </ul>
               </div>
               <div class="col-12 col-md-4 order-md-first">
-                <div class="ngchat-image">
+                <div class="ngchat-image customer__image">
                   <img
-                    src="./images/superagents.png"
+                    src="./images/super-agents.png"
                     alt="Super agents"
                   />
                 </div>
@@ -257,9 +274,9 @@
                 </ul>
               </div>
               <div class="col-12 col-md-4">
-                <div class="ngchat-image">
+                <div class="ngchat-image customer__image">
                   <img
-                    src="./images/aiautomation.png"
+                    src="./images/ai-automation.png"
                     alt="AI automation (ngChat)"
                   />
                 </div>
@@ -302,9 +319,9 @@
                 </ul>
               </div>
               <div class="col-12 col-md-4 order-md-first">
-                <div class="ngchat-image">
+                <div class="ngchat-image customer__image">
                   <img
-                    src="./images/clound-based.png"
+                    src="./images/clound-based-infrastructure.png"
                     alt="Cloud-based infrastructure"
                   />
                 </div>
@@ -320,7 +337,7 @@
               Why Nextgen ?
             </div>
           </div>
-          <div class="col-12 why-nextgen__item why-nextgen__item--1">
+          <div class="col-12 why-nextgen__item">
             <div class="ngchat-image why-nextgen__image">
               <img
                 src="./images/enterprise-grade.png"
@@ -353,10 +370,10 @@
               </div>
             </div>
           </div>
-          <div class="col-12 why-nextgen__item why-nextgen__item--2">
+          <div class="col-12 why-nextgen__item">
             <div class="ngchat-image why-nextgen__image">
               <img
-                src="./images/elastic.png"
+                src="./images/elastic-scalability.png"
                 alt="Elastic scalability"
               />
             </div>
@@ -383,10 +400,10 @@
               </div>
             </div>
           </div>
-          <div class="col-12 why-nextgen__item why-nextgen__item--3">
+          <div class="col-12 why-nextgen__item">
             <div class="ngchat-image why-nextgen__image">
               <img
-                src="./images/workflow.png"
+                src="./images/focus-on-workflow.png"
                 alt="Focus on WorkFlow, not ChatFlow"
               />
             </div>
@@ -416,7 +433,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 why-nextgen__item why-nextgen__item--4">
+          <div class="col-12 why-nextgen__item">
             <div class="ngchat-image why-nextgen__image">
               <img
                 src="./images/cutting-edge.png"
@@ -470,12 +487,12 @@
           </div>
           <div class="col-6 col-md-3">
             <div class="partners__image">
-              <img src="./images/logo-google.png" alt="Google" />
+              <img src="./images/logo-twilio.png" alt="Twilio" />
             </div>
           </div>
           <div class="col-6 col-md-3">
             <div class="partners__image">
-              <img src="./images/logo-twilio.png" alt="Twilio" />
+              <img src="./images/logo-google.png" alt="Google" />
             </div>
           </div>
         </div>

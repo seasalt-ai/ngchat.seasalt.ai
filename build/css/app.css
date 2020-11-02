@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Bootstrap v4.5.2 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -215,7 +215,6 @@ caption {
 
 th {
   text-align: inherit;
-  text-align: -webkit-match-parent;
 }
 
 label {
@@ -3506,7 +3505,6 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -4964,7 +4962,6 @@ a.badge-dark:focus, a.badge-dark.focus {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2;
   padding: 0.75rem 1.25rem;
   color: inherit;
 }
@@ -9556,7 +9553,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
 }
 
 .text-reset {
@@ -9675,18 +9672,18 @@ button:focus {
 }
 
 .ngchat-container {
-  background-image: url(../images/header-background.png);
-  background-position: top 220px right calc(100% - 12px);
+  background-image: url(../images/ng-chat-iso.png);
+  background-position: top 300px right calc(100% - 12px);
   background-repeat: no-repeat;
-  background-size: 200%;
+  background-size: 170%;
   overflow: hidden;
   padding-top: 50px;
 }
 
 @media (min-width: 768px) {
   .ngchat-container {
-    background-position: top -40px right 150%;
-    background-size: 150%;
+    background-position: top -150px right -610px;
+    background-size: 1465px auto;
     padding-top: 0;
   }
 }
@@ -9734,7 +9731,7 @@ button:focus {
 @media (min-width: 768px) {
   .ngchat-navbar {
     background: transparent;
-    padding: 12px 70px;
+    padding: 12px 40px;
     position: static;
   }
 }
@@ -9786,6 +9783,10 @@ button:focus {
   padding-right: 10px;
 }
 
+.ngchat-navbar__divider--light {
+  color: #fff;
+}
+
 .ngchat-navbar__link {
   color: #000;
   font-size: 0.75rem;
@@ -9793,6 +9794,10 @@ button:focus {
 
 .ngchat-navbar__link--active {
   color: #19b9c3;
+}
+
+.ngchat-navbar__link--light {
+  color: #fff;
 }
 
 .ngchat-navbar__link:hover {
@@ -9813,7 +9818,7 @@ button:focus {
 }
 
 .page-header {
-  padding-bottom: 400px;
+  padding-bottom: 450px;
   padding-left: 20px;
   position: relative;
   text-align: center;
@@ -9821,13 +9826,14 @@ button:focus {
 
 @media (min-width: 768px) {
   .page-header {
+    padding-bottom: 300px;
     padding-left: 85px;
   }
 }
 
 @media (min-width: 768px) {
   .page-header {
-    width: 40%;
+    width: 35%;
   }
 }
 
@@ -9846,19 +9852,20 @@ button:focus {
 
 @media (min-width: 768px) {
   .page-header__title {
+    font-size: 2.3rem;
     margin-top: 70px;
   }
 }
 
 @media (min-width: 992px) {
   .page-header__title {
-    margin-top: 160px;
+    margin-top: 100px;
   }
 }
 
 .page-header__description {
   font-size: 1.25rem;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 .ngchat-list {
@@ -9902,7 +9909,7 @@ button:focus {
 @media (min-width: 768px) {
   .production {
     background-image: url(../images/production-background.png);
-    background-position: bottom 40px left -130px;
+    background-position: top 50% left -35vw;
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -9918,7 +9925,6 @@ button:focus {
 @media (min-width: 768px) {
   .production {
     flex-direction: row;
-    padding-bottom: 180px;
   }
 }
 
@@ -9952,9 +9958,9 @@ button:focus {
 @media (min-width: 768px) {
   .customer {
     background-image: url(../images/customer-background.png);
-    background-position: bottom 0 left 0;
+    background-position: top left;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 86%;
   }
 }
 
@@ -9962,6 +9968,20 @@ button:focus {
   .customer {
     padding-left: 120px;
     padding-right: 120px;
+  }
+}
+
+.customer__title {
+  color: #37558f;
+  font-size: 1.625rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .customer__title {
+    margin-bottom: 50px;
   }
 }
 
@@ -9986,6 +10006,11 @@ button:focus {
   text-align: left;
 }
 
+.customer__image {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .why-nextgen {
   margin-bottom: 75px;
   padding-left: 20px;
@@ -9995,9 +10020,9 @@ button:focus {
 @media (min-width: 768px) {
   .why-nextgen {
     background-image: url(../images/nextgen-background.png);
-    background-position: bottom 0 left 0;
+    background-position: top 0 left 0;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 86%;
   }
 }
 
@@ -10032,30 +10057,32 @@ button:focus {
 }
 
 .why-nextgen__item {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 50px;
 }
 
 @media (min-width: 768px) {
   .why-nextgen__item {
     align-items: center;
-    display: flex;
-  }
-  .why-nextgen__item--1 {
-    padding-left: 10%;
-  }
-  .why-nextgen__item--2 {
-    padding-left: 25%;
-  }
-  .why-nextgen__item--3 {
-    padding-left: 40%;
-  }
-  .why-nextgen__item--4 {
-    padding-left: 55%;
+    flex-direction: row;
   }
 }
 
 .why-nextgen__item:last-child {
   padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .why-nextgen__item > *:first-child {
+    flex: 1 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .why-nextgen__item > *:last-child {
+    flex: 1 40%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -10065,26 +10092,8 @@ button:focus {
 }
 
 .why-nextgen__image {
-  margin: 0 auto;
-  min-width: 100px;
-  width: 100px;
-}
-
-.why-nextgen__image img {
-  min-width: 100px;
-  width: 100px;
-}
-
-@media (min-width: 768px) {
-  .why-nextgen__image {
-    margin: 0;
-    min-width: 90px;
-    width: 90px;
-  }
-  .why-nextgen__image img {
-    min-width: 90px;
-    width: 90px;
-  }
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .partners {
@@ -10247,12 +10256,18 @@ button:focus {
 }
 
 .ngchat-card__description {
-  margin-bottom: 48px;
+  margin-bottom: 10px;
 }
 
 .ngchat-card__status {
   color: #777;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.ngchat-card__button {
+  font-size: 0.9rem;
+  min-width: 70%;
+  white-space: nowrap;
 }
 
 .ngchat-card--primary {
