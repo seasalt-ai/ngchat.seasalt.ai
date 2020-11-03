@@ -9672,18 +9672,11 @@ button:focus {
 }
 
 .ngchat-container {
-  background-image: url(../images/ng-chat-iso.png);
-  background-position: top 300px right calc(100% - 12px);
-  background-repeat: no-repeat;
-  background-size: 170%;
-  overflow: hidden;
   padding-top: 50px;
 }
 
 @media (min-width: 768px) {
   .ngchat-container {
-    background-position: top -150px right -610px;
-    background-size: 1465px auto;
     padding-top: 0;
   }
 }
@@ -9818,7 +9811,9 @@ button:focus {
 }
 
 .page-header {
-  padding-bottom: 450px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 90px;
   padding-left: 20px;
   position: relative;
   text-align: center;
@@ -9826,21 +9821,43 @@ button:focus {
 
 @media (min-width: 768px) {
   .page-header {
-    padding-bottom: 300px;
-    padding-left: 85px;
+    flex-direction: row;
   }
+}
+
+.page-header__left-container {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (min-width: 768px) {
-  .page-header {
-    width: 35%;
+  .page-header__left-container {
+    flex: 0 30%;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
-@media (min-width: 1200px) {
-  .page-header {
-    width: 500px;
+.page-header__right-container {
+  padding-top: 37px;
+}
+
+@media (min-width: 768px) {
+  .page-header__right-container {
+    flex: 1 70%;
+    padding-top: 75px;
   }
+}
+
+@media (min-width: 1920px) {
+  .page-header__right-container {
+    margin-top: 300px;
+  }
+}
+
+.page-header__right-container img {
+  max-width: 100%;
+  width: 100%;
 }
 
 .page-header__title {
@@ -9853,19 +9870,33 @@ button:focus {
 @media (min-width: 768px) {
   .page-header__title {
     font-size: 2.3rem;
-    margin-top: 70px;
+    margin-bottom: 18px;
+    margin-top: 150px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1920px) {
   .page-header__title {
-    margin-top: 100px;
+    margin-bottom: 35px;
+    margin-top: 300px;
   }
 }
 
 .page-header__description {
   font-size: 1.25rem;
-  margin-bottom: 100px;
+  margin-bottom: 33px;
+}
+
+@media (min-width: 768px) {
+  .page-header__description {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .page-header__description {
+    margin-bottom: 50px;
+  }
 }
 
 .ngchat-list {
@@ -10087,7 +10118,13 @@ button:focus {
 
 @media (min-width: 768px) {
   .why-nextgen__information {
-    margin-left: 40px;
+    margin-left: 100px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .why-nextgen__information {
+    margin-left: 200px;
   }
 }
 
