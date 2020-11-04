@@ -6,7 +6,7 @@ metadata:
 spec:
   replicas: 1
   strategy:
-    type: Recreate
+    type: RollingUpdate
   selector:
     matchLabels:
       app: homepage
@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
       - name: harbor-pull-secret
       containers:
-      - name: backstage
+      - name: homepage
         image: harbor.seasalt.ai/frontend/ngchat:0.0.1
         imagePullPolicy: Always
         resources:
