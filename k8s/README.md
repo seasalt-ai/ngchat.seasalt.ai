@@ -10,5 +10,5 @@ Deploy:
 
 1. Edit `k8s/homepage.deployment.yaml` to change docker image 
 2. Deploy deployment: `kubectl apply -f k8s/homepage.deployment.yaml`
-3. Deploy deployment: `kubectl apply -f k8s/homepage.ingress.yaml`
-4. Deploy deployment: `kubectl apply -f k8s/homepage.service.yaml`
+3. Deploy ingress: `kubectl apply -f k8s/homepage.ingress.yaml`
+4. Deploy service: `kubectl apply -f k8s/homepage.service.yaml`
