@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: homepage
+  namespace: seasalt
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    kubernetes.io/ingress.global-static-ip-name: customtraefik
+  labels:
+    app: homepage
+spec:
+  tls:
+    - secretName: tls-secret
+  rules:
+    - host: ngchat.seasalt.ai
+      http:
+        paths:
+          - backend:
+              serviceName: homepage
+              servicePort: 5000
+            path: /
