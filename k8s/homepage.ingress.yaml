@@ -19,3 +19,4 @@ spec:
               serviceName: homepage
               servicePort: 5000
             path: /
+            pathType: Exact
