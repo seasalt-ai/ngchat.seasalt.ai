@@ -388,6 +388,153 @@ button:focus {
   }
 }
 
+@include block(feature-list) {
+  margin-bottom: 75px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include media-breakpoint-up(md) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  @include element(header) {
+    background-color: #fff;
+    border-radius: 25px 25px 0 0;
+    box-shadow: 0 0 10px 0 rgba(119, 119, 119, 0.2);
+    color: #777;
+    font-weight: bold;
+    line-height: 1.14;
+    padding: 36px 10px;
+    position: relative;
+    z-index: 2;
+    @include media-breakpoint-up(md) {
+      font-size: 1.125rem;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-left: 43px;
+      padding-right: 43px;
+    }
+  }
+  @include element(body) {
+    background-color: #fff;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 0 20px 0 rgba(119, 119, 119, 0.2);
+    margin-top: 2px;
+    padding-bottom: 37px;
+    padding-top: 37px;
+    @include media-breakpoint-up(md) {
+      padding-bottom: 75px;
+      padding-top: 75px;
+    }
+  }
+  @include element(collapse-container) {
+    margin-bottom: 37px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 75px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include element(collapse-header) {
+    align-items: center;
+    color: #1e2d4c;
+    cursor: pointer;
+    display: flex;
+    font-weight: bold;
+    justify-content: flex-start;
+    line-height: 1.13;
+    padding-left: 35px;
+    padding-right: 35px;
+    @include media-breakpoint-up(md) {
+      font-size: 1.125rem;
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+    &::after {
+      background-image: url('../images/icon-arrow-down-blue.png');
+      background-repeat: no-repeat;
+      background-size: 13px 7px;
+      content: '';
+      display: inline-block;
+      height: 7px;
+      margin-left: 50px;
+      transition: all 0.3s linear;
+      width: 13px;
+      @include media-breakpoint-up(md) {
+        background-size: 25px 14px;
+        height: 14px;
+        width: 25px;
+      }
+    }
+  }
+  @include element(collapse-header) {
+    @include modifier(active) {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  @include element(icon-check) {
+    background-image: url('../images/icon-close-gray.png');
+    background-repeat: no-repeat;
+    background-size: 15px;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    @include media-breakpoint-up(lg) {
+      background-size: 20px;
+      height: 20px;
+      width: 20px;
+
+    }
+  }
+  @include element(content-title) {
+    color: #777;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    @include modifier(highlight) {
+      background-color: #19b9c3;
+      border-radius: 28px;
+      color: #fff;
+      padding: 10px 0 10px 34px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-left: 43px;
+      margin-right: 43px;
+      padding: 10px 0 10px 34px;
+    }
+  }
+  @include element(content-details) {
+    color: #777;
+    line-height: 1.14;
+
+    .row {
+      border-left: 1px solid #19b9c3;
+      font-size: 0.875rem;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-bottom: 40px;
+      padding-left: 0;
+      padding-top: 20px;
+      @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+        margin-left: 87px;
+        margin-right: 43px;
+        padding-left: 50px;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
 @include block(partners) {
   background: #e9ecf2;
   padding-bottom: 22px;
