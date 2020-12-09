@@ -19,6 +19,10 @@ npm start
 npm run build
 ```
 
+### Deployment
+
+See [k8s/README.md](./k8s/README.md)
+
 ## 開發工具 ##
 Visual Studio Code
 
