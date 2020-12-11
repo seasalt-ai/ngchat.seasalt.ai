@@ -4,12 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700" rel="stylesheet">
-
     <style>
         * {
             -webkit-box-sizing: border-box;
@@ -18,125 +14,142 @@
 
         body {
             padding: 0;
-            margin: 0
-        }
-
-        #notfound {
-            position: relative;
-            height: 100vh
-        }
-
-        #notfound .notfound {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%)
-        }
-
-        .notfound {
-            max-width: 520px;
-            width: 100%;
-            line-height: 1.4;
-            text-align: center
-        }
-
-        .notfound .notfound-404 {
-            position: relative;
-            height: 200px;
-            margin: 0 auto 20px;
-            z-index: -1
-        }
-
-        .notfound .notfound-404 h1 {
-            font-family: montserrat, sans-serif;
-            font-size: 236px;
-            font-weight: 200;
             margin: 0;
-            color: #211b19;
-            text-transform: uppercase;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%)
-        }
-
-        .notfound .notfound-404 h2 {
-            font-family: montserrat, sans-serif;
-            font-size: 28px;
             font-weight: 400;
-            text-transform: uppercase;
-            color: #211b19;
-            background: #fff;
-            padding: 10px 5px;
-            margin: auto;
-            display: inline-block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0
+            line-height: 1.5;
+            color: #212529;
+            font-family: Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
         }
 
-        .notfound a {
-            font-family: montserrat, sans-serif;
-            display: inline-block;
-            font-weight: 700;
+        li {
+            text-align: -webkit-match-parent;
+        }
+
+        .ngchat-navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12px 40px;
+        }
+
+        .menu {
+            align-items: center;
+            display: flex;
+        }
+
+        .ngchat-navbar__menu {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            list-style-type: none;
+            margin: 0;
+            margin-left: 40px;
+            margin-right: 10px;
+            padding: 0;
+        }
+
+        .ngchat-navbar__menu-item {
+            padding-right: 30px;
+        }
+
+        .ngchat-navbar__link {
+            color: #000;
+            font-size: 15px;
             text-decoration: none;
-            color: #fff;
-            text-transform: uppercase;
-            padding: 13px 23px;
-            background: #19b9c3;
-            font-size: 18px;
-            -webkit-transition: .2s all;
-            transition: .2s all
+            background-color: transparent;
+            font-weight: 400;
+            line-height: 1.5;
         }
 
-        .notfound a:hover {
+        .ngchat-navbar__link:hover {
             color: #19b9c3;
-            background: #211b19
+            text-decoration: none;
         }
 
-        @media only screen and (max-width:767px) {
-            .notfound .notfound-404 h1 {
-                font-size: 148px
-            }
+        .ngchat-button {
+            background: #fff;
+            border: 1px solid #19b9c3;
+            border-radius: 20px;
+            color: #19b9c3;
+            padding: 3px 11px;
         }
 
-        @media only screen and (max-width:480px) {
-            .notfound .notfound-404 {
-                height: 148px;
-                margin: 0 auto 10px
-            }
+        .ngchat-button--small {
+            font-size: 15px;
+        }
 
-            .notfound .notfound-404 h1 {
-                font-size: 86px
-            }
+        .ngchat-button--active {
+            background-image: linear-gradient(to right, #40ebc4, #19b9c3);
+            border: 0;
+            color: #fff;
+        }
 
-            .notfound .notfound-404 h2 {
-                font-size: 16px
-            }
+        .ngchat-button:hover {
+            background-image: linear-gradient(to right, #40ebc4, #19b9c3);
+            border: 0;
+            color: #fff;
+        }
 
-            .notfound a {
-                padding: 7px 15px;
-                font-size: 14px
-            }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: calc(100vh - 54px);
+        }
+
+        .content-bg {
+            max-width: 600px;
+            padding: 20px 0;
+        }
+
+        .content-btn {
+            padding: 16px 31px 16px 32px;
+            border-radius: 50px;
+            background-image: linear-gradient(to right, #50ffc5 -37%, #19b9c3);
+            display: block;
+            margin: 40px auto;
+            font-size: 30px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: left;
+            color: #ffffff;
+            border: transparent;
         }
     </style>
 
 </head>
 
 <body>
-    <div id="notfound">
-        <div class="notfound">
-            <div class="notfound-404">
-                <h1>Oops!</h1>
-                <h2>404 - The Page can't be found</h2>
-            </div>
-            <a href="/">Go TO Homepage</a>
+    <nav class="ngchat-navbar">
+        <div class="menu">
+            <img class="ngchat-navbar__logo" src="./images/logo-mobile.png" alt="logo">
+            <ul class="ngchat-navbar__menu d-none d-md-flex">
+                <li class="ngchat-navbar__menu-item">
+                    <a class="ngchat-navbar__link" href="#">ngChat Login</a>
+                </li>
+                <li class="ngchat-navbar__menu-item">
+                    <a class="ngchat-navbar__link" href="#">STT</a>
+                </li>
+                <li class="ngchat-navbar__menu-item ngchat-navbar__menu-item--no-padding">
+                    <a class="ngchat-navbar__link" href="/tts">TTS</a>
+                </li>
+            </ul>
         </div>
+        <div class="d-flex">
+            <button class="ngchat-button ngchat-button--small ngchat-navbar__button">
+                SIGN UP
+            </button>
+        </div>
+    </nav>
+    <div class="content">
+        <img class="content-bg" src="./images/404.png" />
+        <button class="content-btn">Back to homepage</button>
     </div>
 </body>
 
