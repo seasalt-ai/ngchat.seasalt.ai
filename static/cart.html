@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="152x152" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="./css/cart.css" />
+  <script src="./js/cart.js"></script>
+  <title>Cart</title>
+</head>
+
+<body>
+  <div id="cart">
+    <header class="header">
+        <img src="./images/cart/logo-ngChat.svg" alt=""/>
+    </header>      
+    <div class="landing-page">
+      <div class="landing-page-area intro">
+        <h1 class="intro-title">
+          <img class="intro-title-icon" src="./images/cart/logo-cart.svg" alt=""/>
+          Next Generation <span class="intro-title-span">Cart Management</span>
+        </h1>
+        <div class="divider"></div>
+        <div class="description">Providing natural language based cart management for e-commerce dialogue systems</div>
+        <div class="pic">
+          <img class="intro-desc-icon" src="./images/cart/ngchat-cart.svg" alt=""/>
+        </div>
+      </div>
+      <div class="landing-page-area video">
+        <div class="video-frame"><iframe width="560" height="315" src="https://www.youtube.com/embed/eIib9hh2UCE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+      <div class="landing-page-area feature">
+        <h2>Key Features</h2>
+        <div class="feature-area">
+          <div class="feature-pic">
+            <img alt="" class="feature-pic-img" src="./images/cart/keyFeature1.svg" />
+            <div class="feature-text"><div class="feature-title">Detailed Product Functionality</div>
+            <div class="feature-desc">Store product data and real world knowledge in a generalized schema. Represent complex items such as combos, and products with variations or complex modifiers. Generate NLU training data from the menu.</div>
+            </div>
+          </div>
+          <div class="feature-pic">
+            <img alt="" class="feature-pic-img" src="./images/cart/keyFeature2.svg" />
+            <div class="feature-text"><div class="feature-title">Customizable Models</div>
+            <div class="feature-desc"> Answer complex queries and provide recommendations from the product list with Elastic Search. Offer suggestions for multi-item and combo orders with the Product Solver.</div>
+          </div>
+          </div>
+          <div class="feature-pic">
+            <img alt="" class="feature-pic-img" src="./images/cart/keyFeature3.svg" />
+         <div class="feature-text"><div class="feature-title">Natural Language Input & Output</div>
+            <div class="feature-desc">Natural language in, natural language out. Integrate seamlessly with conversational AI by receiving natural language information from the user and flexibly selecting products with fuzzy and semantic matching.</div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="landing-page-area carousel">
+        <h2>Query, Customize, Pay with Natural Language</h2>
+        <div id="carousel-slide" class="carousel-slide">
+          <div class="carousel-area">
+            <div tabIndex="0" class="carousel-area-item">
+              <img class="item-img-pic" src="./images/cart/restaurants.png"/>
+              <div class="item-content">
+                <div class="item-content-title">Restaurants</div>
+                <div class="item-content-desc">ngChat Cart excels at supporting conversational AI for online restaurant ordering.</div>
+              </div>
+            </div>
+            <div tabIndex="1" class="carousel-area-item active">
+              <img class="item-img-pic" src="./images/cart/groceries.jpg"/>
+              <div class="item-content">
+                <div class="item-content-title">Groceries</div>
+                <div class="item-content-desc">ngChat Cart functions as a backend for conversational AI that assist with online grocery shopping.</div>
+              </div>
+            </div>
+            <div tabIndex="2" class="carousel-area-item">
+              <img class="item-img-pic" src="./images/cart/eCommerce.jpg"/>
+              <div class="item-content">
+                <div class="item-content-title">e-Commerce</div>
+                <div class="item-content-desc">Besides food, ngChat Cart can be extended to other e-commerce applications such as: electronics, clothing, homegoods, and more.</div>
+              </div>
+            </div>
+          </div>
+          <ul class="carousel-dots">
+            <li tabIndex="0"></li>
+            <li tabIndex="1" class="carousel-active"></li>
+            <li tabIndex="2"></li>
+          </ul>
+        </div>
+        <div class="description">
+          Please send an email to 
+          <a class="description-link" target="_blank" href="mailto:sales@seasalt.ai">
+            sales@seasalt.ai
+          </a> to book a demo.
+        </div>
+        <a class="btn-try-now" href="./#">Try Now</a>
+      </div>
+      <div class="landing-page-area footer">
+          <img alt="" class="footer-icon" src="./images/cart/logo-seasalt.svg" />
+        <div class="copy-right">
+          Made with  
+          <img alt="" src="./images/cart/icon-heart.svg" />
+          in the city of 
+          <img alt="" class="copy-right-icon iconCoffee" src="images/cart/icon-coffee.svg" />
+          <img alt="" class="copy-right-icon" src="images/cart/icon-umbrella.svg" />
+          <img alt="" class="copy-right-icon" src="images/cart/icon-airplane.svg" />
+          <img alt="" class="copy-right-icon" src="images/cart/icon-sketch.svg" />
+        </div>
+        <div class="copy-right">
+          Copyright © <span id="year" class="year"></span>. All Rights Reserved.
+        </div>
+      </div>
+    </div>      
+</div>
+</body>
+</html>
