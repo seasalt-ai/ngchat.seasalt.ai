@@ -10983,24 +10983,37 @@ __webpack_require__.r(__webpack_exports__);
 
 document.addEventListener('DOMContentLoaded', function () {
   var currentYear = new Date().getFullYear();
-  var nextYear = currentYear + 1;
-  var copyRightYear = "".concat(currentYear, "-").concat(nextYear);
+  var copyRightYear = "2021-".concat(currentYear);
   $('#year').text(copyRightYear);
   var $carouselDotsItem = $('.carousel-dots > li');
   var $carouselItems = $('.carousel-area .carousel-area-item');
-  $carouselDotsItem.on('click', function () {
-    var selectedIndex = $(this).attr('tabIndex');
-    $carouselDotsItem.removeClass('carousel-active');
-    $(this).addClass('carousel-active');
+
+  function switchCarousel(currentIndex) {
     $carouselItems.removeClass('active');
-    $($carouselItems[selectedIndex]).addClass('active');
-  });
-  $carouselItems.on('click', function () {
-    var selectedIndex = $(this).attr('tabIndex');
-    $carouselItems.removeClass('active');
-    $(this).addClass('active');
+    $($carouselItems[currentIndex]).addClass('active');
     $carouselDotsItem.removeClass('carousel-active');
-    $($carouselDotsItem[selectedIndex]).addClass('carousel-active');
+    $($carouselDotsItem[currentIndex]).addClass('carousel-active');
+  } // $carouselDotsItem.on('click', function () {
+  //   const selectedIndex = $(this).attr('tabIndex')
+  //   switchCarousel(selectedIndex)
+  // })
+  // $carouselItems.on('click', function () {
+  //   const selectedIndex = $(this).attr('tabIndex')
+  //   switchCarousel(selectedIndex)
+  // })
+
+
+  window.addEventListener('scroll', function (e) {
+    if (this.scrollY > 800 && this.scrollY < 1090) {
+      if (!$($carouselItems[0]).hasClass('active')) switchCarousel(0);
+    } else if (this.scrollY >= 1090 && this.scrollY < 1400) {
+      if (!$($carouselItems[1]).hasClass('active')) switchCarousel(1);
+    } else if (this.scrollY >= 1400) {
+      if (!$($carouselItems[2]).hasClass('active')) switchCarousel(2);
+    } else if ($carouselItems.hasClass('active')) {
+      $carouselItems.removeClass('active');
+      $carouselDotsItem.removeClass('carousel-active');
+    }
   });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))

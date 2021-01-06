@@ -140,18 +140,18 @@ body {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  padding: 30px 10% 0;
+  padding: 30px 12% 0;
 }
 
 .landing-page-area.carousel .carousel-area {
-  width: 92%;
+  width: 95%;
 }
 
 .landing-page-area.carousel .carousel-area-item {
   align-items: center;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 6%;
+  margin-bottom: 3%;
   opacity: 0.2;
   width: 100%;
 }
@@ -162,6 +162,7 @@ body {
   flex: 1;
   margin-right: 5%;
   min-width: 200px;
+  transform: scale(0.9);
   width: 45%;
 }
 
@@ -172,6 +173,7 @@ body {
   flex: 1;
   position: relative;
   text-align: center;
+  transform: scale(0.9);
 }
 
 .landing-page-area.carousel .carousel-area-item .item-content-title {
@@ -191,8 +193,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 7px 0 rgba(25, 185, 195, 0.5);
   color: #fff;
-  display: none;
-  font-size: 13px;
+  font-size: 14px;
   margin-left: 10px;
   min-width: 130px;
   padding: 23px 15px 15px;
@@ -201,20 +202,17 @@ body {
 
 .landing-page-area.carousel .carousel-area-item.active {
   opacity: 1;
-  transition: all 0.3s ease-in-out;
 }
 
 .landing-page-area.carousel .carousel-area-item.active .item-img-pic,
 .landing-page-area.carousel .carousel-area-item.active .item-content {
-  transform: scale(1.2);
-}
-
-.landing-page-area.carousel .carousel-area-item.active .item-content-desc {
-  display: block;
+  animation: popout 0.5s ease-in-out;
+  transform: scale(1);
 }
 
 .landing-page-area.carousel .description {
   font-size: 13px;
+  margin-top: 30px;
 }
 
 .landing-page-area.carousel .description-link {
@@ -265,7 +263,7 @@ body {
   list-style: none;
   margin: 0 15px 0 0;
   padding: 0;
-  width: 8%;
+  width: 5%;
 }
 
 .carousel-dots li {
@@ -305,9 +303,19 @@ body {
   .landing-page-area.feature .feature-area {
     align-items: center;
     flex-direction: column;
+    width: 90%;
   }
   .landing-page-area.feature .feature-area :last-of-type {
     margin-bottom: 0;
+  }
+}
+
+@keyframes popout {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
