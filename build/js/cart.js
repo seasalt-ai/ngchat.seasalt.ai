@@ -10993,22 +10993,35 @@ document.addEventListener('DOMContentLoaded', function () {
     $($carouselItems[currentIndex]).addClass('active');
     $carouselDotsItem.removeClass('carousel-active');
     $($carouselDotsItem[currentIndex]).addClass('carousel-active');
-  } // $carouselDotsItem.on('click', function () {
-  //   const selectedIndex = $(this).attr('tabIndex')
-  //   switchCarousel(selectedIndex)
-  // })
-  // $carouselItems.on('click', function () {
-  //   const selectedIndex = $(this).attr('tabIndex')
-  //   switchCarousel(selectedIndex)
-  // })
+  }
 
+  function scrollToCarousel(currentIndex) {
+    var scrollPosition = $carouselItems[currentIndex].offsetTop - screen.height / 2;
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: 'smooth'
+    });
+  }
 
+  $carouselDotsItem.on('click', function () {
+    var selectedIndex = $(this).attr('tabIndex');
+    scrollToCarousel(selectedIndex);
+  });
+  $carouselItems.on('click', function () {
+    var selectedIndex = $(this).attr('tabIndex');
+    scrollToCarousel(selectedIndex);
+  });
   window.addEventListener('scroll', function (e) {
-    if (this.scrollY > 800 && this.scrollY < 1090) {
+    var $carouselItem0 = $carouselItems[0].offsetTop;
+    var $carouselItem1 = $carouselItems[1].offsetTop;
+    var $carouselItem2 = $carouselItems[2].offsetTop;
+    var targetHeight = this.scrollY + screen.height / 2;
+
+    if (targetHeight >= $carouselItem0 && targetHeight < $carouselItem1) {
       if (!$($carouselItems[0]).hasClass('active')) switchCarousel(0);
-    } else if (this.scrollY >= 1090 && this.scrollY < 1400) {
+    } else if (targetHeight >= $carouselItem1 && targetHeight < $carouselItem2) {
       if (!$($carouselItems[1]).hasClass('active')) switchCarousel(1);
-    } else if (this.scrollY >= 1400) {
+    } else if (targetHeight >= $carouselItem2) {
       if (!$($carouselItems[2]).hasClass('active')) switchCarousel(2);
     } else if ($carouselItems.hasClass('active')) {
       $carouselItems.removeClass('active');

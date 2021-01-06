@@ -278,7 +278,7 @@ body {
   width: 10px;
 }
 
-.carousel-dots li:hover, .carousel-dots li:focus {
+.carousel-dots li:hover {
   opacity: 1;
   outline: none;
 }
