@@ -1,6 +1,6 @@
-@import '~bootstrap';
-@import './common/mixin';
-@import './common/function';
+@import "~bootstrap";
+@import "./common/mixin";
+@import "./common/function";
 
 $primary-color: #19b9c3;
 $secondary-color: #2dd3c4;
@@ -10,7 +10,7 @@ $list-text-color: #1e2d4c;
 
 html,
 body {
-  font-family: Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  font-family: Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
   font-size: 16px;
   @include media-breakpoint-up(md) {
     font-size: 18px;
@@ -48,20 +48,29 @@ button:focus {
     padding: 5px 25px;
   }
   @include modifier(active) {
-    background-image: linear-gradient(to right, $tertiary-color, $primary-color);
-    border: 0;
+    background-image: linear-gradient(
+      to right,
+      $tertiary-color,
+      $primary-color
+    );
+    border-color: transparent;
     color: #fff;
   }
 
   &:hover {
-    background-image: linear-gradient(to right, $tertiary-color, $primary-color);
-    border: 0;
+    background-image: linear-gradient(
+      to right,
+      $tertiary-color,
+      $primary-color
+    );
+    border-color: transparent;
     color: #fff;
   }
 }
 
 @include block(ngchat-navbar) {
   background: #fff;
+  justify-content: flex-end;
   left: 0;
   padding: 12px 20px;
   position: fixed;
@@ -70,6 +79,7 @@ button:focus {
   z-index: 10;
   @include media-breakpoint-up(md) {
     background: transparent;
+    justify-content: space-between;
     padding: 12px 40px;
     position: static;
   }
@@ -86,7 +96,11 @@ button:focus {
   }
   @include element(button) {
     @include media-breakpoint-up(md) {
-      background-image: linear-gradient(to right, $tertiary-color, $primary-color);
+      background-image: linear-gradient(
+        to right,
+        $tertiary-color,
+        $primary-color
+      );
       border: 0;
       color: #fff;
     }
@@ -106,6 +120,14 @@ button:focus {
     @include modifier(no-padding) {
       padding-right: 0;
     }
+
+    @include modifier(products) {
+      position: relative;
+
+      &.show {
+        color: $primary-color;
+      }
+    }
   }
   @include element(divider) {
     padding-left: 10px;
@@ -116,6 +138,8 @@ button:focus {
   }
   @include element(link) {
     color: #000;
+    cursor: pointer;
+    display: block;
     // font-size: 12px;
     font-size: 0.75rem;
     @include modifier(active) {
@@ -129,18 +153,77 @@ button:focus {
       color: $primary-color;
       text-decoration: none;
     }
+
+    &:active,
+    &.show {
+      color: $primary-color;
+    }
+  }
+}
+
+@include block(products-list) {
+  border-radius: 10px;
+  box-shadow: 0 -1px 7px rgba(0, 0, 0, 0.16);
+  display: none;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  top: 25px;
+  white-space: nowrap;
+  z-index: 6;
+
+  @include element(item) {
+    background-color: #19b9c3;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    list-style: none;
+    padding: 5px 8px;
+
+    @include modifier(link) {
+      color: #fff;
+      display: block;
+      font-size: 0.75rem;
+
+      &:hover {
+        color: #19b9c3;
+        text-decoration: none;
+      }
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    &:last-of-type {
+      border-bottom: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      a {
+        color: #19b9c3;
+      }
+    }
+  }
+
+  &.show {
+    display: block;
   }
 }
 
 @include block(humber-button) {
-  background-image: url('../images/icon-menu.png');
+  background-image: url("../images/icon-menu.png");
   background-position: center;
   background-repeat: no-repeat;
   height: 20px;
   width: 20px;
 
   @include modifier(active) {
-    background-image: url('../images/icon-close.png');
+    background-image: url("../images/icon-close.png");
   }
 }
 
@@ -217,11 +300,11 @@ button:focus {
     display: flex;
 
     &::before {
-      background-image: url('../images/ic-check.png');
+      background-image: url("../images/ic-check.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 16px auto;
-      content: '';
+      content: "";
       display: block;
       flex: 0 0 16px;
       height: 16px;
@@ -243,7 +326,7 @@ button:focus {
   justify-content: space-between;
   margin-bottom: 90px;
   @include media-breakpoint-up(md) {
-    background-image: url('../images/production-background.png');
+    background-image: url("../images/production-background.png");
     background-position: top 50% left -35vw;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -277,7 +360,7 @@ button:focus {
 @include block(customer) {
   margin-bottom: 120px;
   @include media-breakpoint-up(md) {
-    background-image: url('../images/customer-background.png');
+    background-image: url("../images/customer-background.png");
     background-position: top left;
     background-repeat: no-repeat;
     background-size: 86%;
@@ -324,7 +407,7 @@ button:focus {
   padding-left: 20px;
   padding-right: 20px;
   @include media-breakpoint-up(md) {
-    background-image: url('../images/nextgen-background.png');
+    background-image: url("../images/nextgen-background.png");
     background-position: top 0 left 0;
     background-repeat: no-repeat;
     background-size: 86%;
@@ -453,10 +536,10 @@ button:focus {
     }
 
     &::after {
-      background-image: url('../images/icon-arrow-down-blue.png');
+      background-image: url("../images/icon-arrow-down-blue.png");
       background-repeat: no-repeat;
       background-size: 13px 7px;
-      content: '';
+      content: "";
       display: inline-block;
       height: 7px;
       margin-left: 50px;
@@ -477,7 +560,7 @@ button:focus {
     }
   }
   @include element(icon-check) {
-    background-image: url('../images/icon-close-gray.png');
+    background-image: url("../images/icon-close-gray.png");
     background-repeat: no-repeat;
     background-size: 15px;
     display: inline-block;
@@ -487,7 +570,6 @@ button:focus {
       background-size: 20px;
       height: 20px;
       width: 20px;
-
     }
   }
   @include element(content-title) {
@@ -632,7 +714,7 @@ button:focus {
     background-image: radial-gradient(#7fbacd 20%, #e7f2f8 80%, #fff 100%);
     border-radius: 250%;
     bottom: 0;
-    content: '';
+    content: "";
     display: block;
     height: 250%;
     left: 50%;
@@ -674,6 +756,25 @@ button:focus {
     font-size: 0.9rem;
     min-width: 70%;
     white-space: nowrap;
+
+    &:hover {
+      .ngchat-card__link {
+        color: #fff;
+      }
+    }
+  }
+  @include element(link) {
+    color: #19b9c3;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        $tertiary-color,
+        $primary-color
+      );
+      color: #fff;
+      text-decoration: none;
+    }
   }
   @include modifier(primary) {
     border-top-color: $primary-color;
@@ -731,10 +832,10 @@ button:focus {
   }
 
   &::after {
-    background-image: url('../images/icon-arrow-down.png');
+    background-image: url("../images/icon-arrow-down.png");
     background-repeat: no-repeat;
     background-size: 15px;
-    content: '';
+    content: "";
     display: inline-block;
     height: 7px;
     position: absolute;
@@ -769,8 +870,8 @@ button:focus {
   opacity: 0;
   padding: 0 23px;
   position: fixed;
-  top: 50px;
-  transform: translateX(-100%);
+  top: 43px;
+  transform: translateX(100%);
   transition: all ease-in-out 0.5s;
   width: 100%;
   z-index: 999;
@@ -807,6 +908,16 @@ button:focus {
   @include modifier(show) {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  @include element(products-list) {
+    padding-left: 30px;
+    @include modifier(item) {
+      list-style: none;
+    }
+    @include modifier(link) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -849,4 +960,39 @@ button:focus {
 .modal.show .modal-dialog {
   top: 50%;
   transform: translateY(-50%);
+}
+
+.book-demo-bottom {
+  background-image: url(../images/bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  height: 350px;
+  margin-top: 12%;
+  padding-bottom: 50px;
+
+  .ngchat-button {
+    border-radius: 50px;
+    font-size: 1.7rem;
+    padding: 10px 40px;
+    transform: translateY(-30px);
+  }
+}
+
+.footer {
+  a > img {
+    height: 40px;
+    margin-bottom: 10px;
+    width: auto;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 5px;
+
+    img {
+      vertical-align: middle;
+      width: 10px;
+    }
+  }
 }

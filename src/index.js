@@ -3378,4 +3378,27 @@ document.addEventListener('DOMContentLoaded', function () {
     .on('hide.bs.collapse', function () {
       $(this).parent().find('.feature-list__collapse-header').removeClass('feature-list__collapse-header--active')
     })
+
+  // book a demo button click
+  $('[id^=bookDemo_]').on('click', clickBookDemo)
+
+  // products option list
+  $('.ngchat-navbar__menu-item--products').on('click', function () {
+    $(this).find('.meun-item-name').toggleClass('show')
+    $('.products-list').toggleClass('show')
+  })
+
+  // $('.ngchat-navbar__menu-item--products').on('blur', function () {
+  //   $('.products-list').removeClass('show')
+  // })
 })
+
+const demoUrl = [
+  'https://forms.gle/RdNoQYseQ8DVpTu66',
+  'https://share.hsforms.com/1mqJbPiylRJuIP6VMo-n1DQ5jwqm'
+]
+function clickBookDemo () {
+  const randomIndex = Math.floor(Math.random() * 2)
+  const bookDemoLink = demoUrl[randomIndex]
+  window.open(bookDemoLink)
+}
