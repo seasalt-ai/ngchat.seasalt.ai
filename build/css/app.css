@@ -9649,7 +9649,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 html,
 body {
-  font-family: Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  font-family: Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
   font-size: 16px;
 }
 
@@ -9701,18 +9701,19 @@ button:focus {
 
 .ngchat-button--active {
   background-image: linear-gradient(to right, #40ebc4, #19b9c3);
-  border: 0;
+  border-color: transparent;
   color: #fff;
 }
 
 .ngchat-button:hover {
   background-image: linear-gradient(to right, #40ebc4, #19b9c3);
-  border: 0;
+  border-color: transparent;
   color: #fff;
 }
 
 .ngchat-navbar {
   background: #fff;
+  justify-content: flex-end;
   left: 0;
   padding: 12px 20px;
   position: fixed;
@@ -9724,6 +9725,7 @@ button:focus {
 @media (min-width: 768px) {
   .ngchat-navbar {
     background: transparent;
+    justify-content: space-between;
     padding: 12px 40px;
     position: static;
   }
@@ -9771,6 +9773,14 @@ button:focus {
   padding-right: 0;
 }
 
+.ngchat-navbar__menu-item--products {
+  position: relative;
+}
+
+.ngchat-navbar__menu-item--products.show {
+  color: #19b9c3;
+}
+
 .ngchat-navbar__divider {
   padding-left: 10px;
   padding-right: 10px;
@@ -9782,6 +9792,8 @@ button:focus {
 
 .ngchat-navbar__link {
   color: #000;
+  cursor: pointer;
+  display: block;
   font-size: 0.75rem;
 }
 
@@ -9796,6 +9808,64 @@ button:focus {
 .ngchat-navbar__link:hover {
   color: #19b9c3;
   text-decoration: none;
+}
+
+.ngchat-navbar__link:active, .ngchat-navbar__link.show {
+  color: #19b9c3;
+}
+
+.products-list {
+  border-radius: 10px;
+  box-shadow: 0 -1px 7px rgba(0, 0, 0, 0.16);
+  display: none;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  top: 25px;
+  white-space: nowrap;
+  z-index: 6;
+}
+
+.products-list__item {
+  background-color: #19b9c3;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  list-style: none;
+  padding: 5px 8px;
+}
+
+.products-list__item--link {
+  color: #fff;
+  display: block;
+  font-size: 0.75rem;
+}
+
+.products-list__item--link:hover {
+  color: #19b9c3;
+  text-decoration: none;
+}
+
+.products-list__item:first-of-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.products-list__item:last-of-type {
+  border-bottom: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.products-list__item:hover {
+  background-color: #fff;
+}
+
+.products-list__item:hover a {
+  color: #19b9c3;
+}
+
+.products-list.show {
+  display: block;
 }
 
 .humber-button {
@@ -9916,7 +9986,7 @@ button:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 16px auto;
-  content: '';
+  content: "";
   display: block;
   flex: 0 0 16px;
   height: 16px;
@@ -10225,7 +10295,7 @@ button:focus {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAApCAYAAAB5hwSGAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAASaADAAQAAAABAAAAKQAAAACQDfFrAAADaUlEQVRoBe2az28SURDHZ3YXYy0HpBYiUqOnqtReTRN/VKNoUokePHgx/gnGg3+ATbx5qIl/ggePGiUi0RRro/FoS881oRJ/RNODqLWF53ukg1AWdhfevt1t3Mvszhvem/kwX9i8XYD/hyUBNIuIj2YOhvRqbN3YWP68kP9iFrOdfFb1tkBKjKVHDAjlAPEIQWCMPSwVK9cAChvk2y7Wbr0NSMnU+ShqxgIC7muDwNjsxnftYrn85GfbWEAde8emDocAZwEhvrUEBuxxaTF7mfxa4wRDM6aARADiaX2olkskMrsoPsg2cTRzKIRYMANULxfw0khq6irVuAlp0mAIV8hpZjnAE3qUPU8mJwbMxoPiS4xfGNWhNsfzjXXNWYNWSJEDkTDXnWXxiHAcI0PPgtpRQmIGM+b4Fz7cFZAYZJigmHonrX54tAqMfSJnN8tBnQpiR4kOMhBe8dq6d9C/4ot02vhNYgD3yWllNzsqHxTp1SXG9Ne2OogXz1lUawzuEYcGpFIxe4d30xsasLJ1ULujvv8xFxLTa8a8XUCibv7vNv1x6el7YtCAJBxr2nqaB7yjQSvLFz7pZ+mRxPgXuseqFhrn9c+sLGan6VrYxn0SOePj6cEdLPSSAzhGPivLGMyz1W/plZW3v6xiVY07lZjISwDi90c3t+bYBkkEBB2UTECChymkIIOSDagrpCCCcgOQJaQggXILkC1IQQDlJiDbkPwMym1AjiD5EZQKQI4h+QmUKkA9QfIDKJWAeobkJSjVgPqC5AUoLwD1DUklKK8ASYGkApSXgKRBchOU14CkQnIDlB8ASYckE5RfALkCSQYoPwFyDZKYeDg1Gd6pDb5wusNZreIN3ajlHO5Jm+4oijxkHB033WRMLkANYDjPt/YmZMxnNgd/V+Euf4hxy2xMlq/lQYCsSWmer0uFH2van3NOHi7QZ+3Y+p60y4BEHq52EhXay545fbaT7bRp3ym+H78SSCJBmdJTIbFmqK7KrXkhWdJTJbHm3JV1Ei3aj/RUSozyFVY5JLFoL9JTLTGRJx3K5EYLCutUel5IrDlfTzqJErAjPa8kRjkK60knUQL8zd7K71rlLAeRI1+LZXDb7Nl8S4yCC087qbm+/amp6wzxDCCL8TcXlqsAD8rFrO1XgZrnkn3+FxgDY11wFglvAAAAAElFTkSuQmCC);
   background-repeat: no-repeat;
   background-size: 13px 7px;
-  content: '';
+  content: "";
   display: inline-block;
   height: 7px;
   margin-left: 50px;
@@ -10439,7 +10509,7 @@ button:focus {
   background-image: radial-gradient(#7fbacd 20%, #e7f2f8 80%, #fff 100%);
   border-radius: 250%;
   bottom: 0;
-  content: '';
+  content: "";
   display: block;
   height: 250%;
   left: 50%;
@@ -10486,6 +10556,20 @@ button:focus {
   font-size: 0.9rem;
   min-width: 70%;
   white-space: nowrap;
+}
+
+.ngchat-card__button:hover .ngchat-card__link {
+  color: #fff;
+}
+
+.ngchat-card__link {
+  color: #19b9c3;
+}
+
+.ngchat-card__link:hover {
+  background-image: linear-gradient(to right, #40ebc4, #19b9c3);
+  color: #fff;
+  text-decoration: none;
 }
 
 .ngchat-card--primary {
@@ -10549,7 +10633,7 @@ button:focus {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAMCAYAAAB4MH11AAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAGKADAAQAAAABAAAADAAAAABUnWbVAAAB2UlEQVQ4Ea1TPWjCUBC+aDRjq6igo4O0KEQQJxGcu9RF6Fa72LF20Llu/g2ORZcWlyIOiuAcREGcDIJ0EoogBQcrCkYR7V2oEFvR/r0h+e7d3fe9d++OiUQiToZhLheLRSyTybzBP6xoNOpHGj6ZTMZYlUoVROPGYDBcdDqdssPheP2LRrVaddZqtXPiwMOX2fl8fsdxnG8ymfDFYvFar9eDxWL5lUalUoFGoyHnrtfr21Qq1VY3m03J7XY/sSx7ulwuT0RRBKPRCCaT6UcihUIBWq2WnIMlv0okEvdkMEoWrN0DvQftBQIBcLlcSvdOPJvNIJ/PQ6/XI/8Y8/3xeFzYBKs3gP54vZLH48EYxtftdmWX1WpVhmxhIs9ms9Dv92l/vFqtfPiwTWXQlgA5UETwer0vCP10qtFoBHa7XZkj48FgALlcDobDIdkiHQrJnz8HfhGggHq93sabiNhhZ0jEEZnNZgONRiPnk00nn06nZIvYKL50Or2z+7beQM5WfGhGUETArSOz2QyhUAiodNQtkiQBdsojzk943/zsFSCtD5EHhLxOp5NLRvtEjiUJEt63DgpQcjgcPsZZERDyZFOPI3mG8KH1LQEiIRGtVkukJSQvHSLe+N8BUSi+Eq1mCdQAAAAASUVORK5CYII=);
   background-repeat: no-repeat;
   background-size: 15px;
-  content: '';
+  content: "";
   display: inline-block;
   height: 7px;
   position: absolute;
@@ -10582,8 +10666,8 @@ button:focus {
   opacity: 0;
   padding: 0 23px;
   position: fixed;
-  top: 50px;
-  transform: translateX(-100%);
+  top: 43px;
+  transform: translateX(100%);
   transition: all ease-in-out 0.5s;
   width: 100%;
   z-index: 999;
@@ -10625,6 +10709,18 @@ button:focus {
 .menu--show {
   opacity: 1;
   transform: translateX(0);
+}
+
+.menu__products-list {
+  padding-left: 30px;
+}
+
+.menu__products-list--item {
+  list-style: none;
+}
+
+.menu__products-list--link {
+  font-size: 1.2rem;
 }
 
 .point-decorations {
@@ -10670,6 +10766,39 @@ button:focus {
 .modal.show .modal-dialog {
   top: 50%;
   transform: translateY(-50%);
+}
+
+.book-demo-bottom {
+  background-image: url(../images/bg.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  height: 350px;
+  margin-top: 12%;
+  padding-bottom: 50px;
+}
+
+.book-demo-bottom .ngchat-button {
+  border-radius: 50px;
+  font-size: 1.7rem;
+  padding: 10px 40px;
+  transform: translateY(-30px);
+}
+
+.footer a > img {
+  height: 40px;
+  margin-bottom: 10px;
+  width: auto;
+}
+
+.footer p {
+  font-size: 12px;
+  margin: 5px;
+}
+
+.footer p img {
+  vertical-align: middle;
+  width: 10px;
 }
 
 
