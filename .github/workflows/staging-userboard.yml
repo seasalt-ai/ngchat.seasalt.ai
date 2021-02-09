@@ -8,13 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: "finnp/create-file-action@master"
-        env:
-          FILE_NAME: "/etc/docker/daemon.json"
-          FILE_DATA: '{"insecure-registries":["https://harbor.seasalt.ai"]}'
-
-      - name: restart docker
-        run: systemctl restart docker
+      - name: Docker
+        run: |
+          echo $'{\n    "insecure-registries":["https://harbor.seasalt.ai"]\n}' | sudo tee /etc/docker/daemon.json
+          sudo service docker restart
 
       - name: CheckoutRepo
         uses: actions/checkout@master
