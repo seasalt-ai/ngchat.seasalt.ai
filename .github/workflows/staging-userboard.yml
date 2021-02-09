@@ -1,0 +1,26 @@
+name: build-image
+on:
+  workflow_dispatch
+
+jobs:
+  Docker-build:
+    # runs on self-hosted runner
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: CheckoutRepo
+        uses: actions/checkout@master
+
+      - name: Get npm version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: Docker login
+        run: docker login -u ${{ secrets.HARBOR_USER }} -p ${{ secrets.HARBOR_PWD }} https://harbor.seasalt.ai
+
+      - name: Docker build and push
+        run: |
+          set -x
+          docker build -t harbor.seasalt.ai/frontend/ngchat:${{ steps.package-version.outputs.current-version }} -f frontend.dockerfile .
+          docker push harbor.seasalt.ai/frontend/ngchat:${{ steps.package-version.outputs.current-version }}
+          docker rmi harbor.seasalt.ai/frontend/ngchat:${{ steps.package-version.outputs.current-version }}
