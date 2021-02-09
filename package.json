@@ -1,6 +1,6 @@
 {
   "name": "seasalhtml",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Project for seasal web html",
   "main": "./src/index.js",
   "scripts": {
