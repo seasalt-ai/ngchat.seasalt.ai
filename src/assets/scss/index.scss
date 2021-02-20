@@ -1,6 +1,6 @@
-@import "~bootstrap";
-@import "./common/mixin";
-@import "./common/function";
+@import '~bootstrap';
+@import './common/mixin';
+@import './common/function';
 
 $primary-color: #19b9c3;
 $secondary-color: #2dd3c4;
@@ -10,7 +10,7 @@ $list-text-color: #1e2d4c;
 
 html,
 body {
-  font-family: Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-family: Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
   font-size: 16px;
   @include media-breakpoint-up(md) {
     font-size: 18px;
@@ -48,21 +48,17 @@ button:focus {
     padding: 5px 25px;
   }
   @include modifier(active) {
-    background-image: linear-gradient(
-      to right,
-      $tertiary-color,
-      $primary-color
-    );
+    background-image: linear-gradient(to right,
+    $tertiary-color,
+    $primary-color);
     border-color: transparent;
     color: #fff;
   }
 
   &:hover {
-    background-image: linear-gradient(
-      to right,
-      $tertiary-color,
-      $primary-color
-    );
+    background-image: linear-gradient(to right,
+    $tertiary-color,
+    $primary-color);
     border-color: transparent;
     color: #fff;
   }
@@ -96,11 +92,9 @@ button:focus {
   }
   @include element(button) {
     @include media-breakpoint-up(md) {
-      background-image: linear-gradient(
-        to right,
-        $tertiary-color,
-        $primary-color
-      );
+      background-image: linear-gradient(to right,
+      $tertiary-color,
+      $primary-color);
       border: 0;
       color: #fff;
     }
@@ -216,14 +210,14 @@ button:focus {
 }
 
 @include block(humber-button) {
-  background-image: url("../images/icon-menu.png");
+  background-image: url('../images/icon-menu.png');
   background-position: center;
   background-repeat: no-repeat;
   height: 20px;
   width: 20px;
 
   @include modifier(active) {
-    background-image: url("../images/icon-close.png");
+    background-image: url('../images/icon-close.png');
   }
 }
 
@@ -300,11 +294,11 @@ button:focus {
     display: flex;
 
     &::before {
-      background-image: url("../images/ic-check.png");
+      background-image: url('../images/ic-check.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: 16px auto;
-      content: "";
+      content: '';
       display: block;
       flex: 0 0 16px;
       height: 16px;
@@ -326,7 +320,7 @@ button:focus {
   justify-content: space-between;
   margin-bottom: 90px;
   @include media-breakpoint-up(md) {
-    background-image: url("../images/production-background.png");
+    background-image: url('../images/production-background.png');
     background-position: top 50% left -35vw;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -360,7 +354,7 @@ button:focus {
 @include block(customer) {
   margin-bottom: 120px;
   @include media-breakpoint-up(md) {
-    background-image: url("../images/customer-background.png");
+    background-image: url('../images/customer-background.png');
     background-position: top left;
     background-repeat: no-repeat;
     background-size: 86%;
@@ -407,7 +401,7 @@ button:focus {
   padding-left: 20px;
   padding-right: 20px;
   @include media-breakpoint-up(md) {
-    background-image: url("../images/nextgen-background.png");
+    background-image: url('../images/nextgen-background.png');
     background-position: top 0 left 0;
     background-repeat: no-repeat;
     background-size: 86%;
@@ -536,10 +530,10 @@ button:focus {
     }
 
     &::after {
-      background-image: url("../images/icon-arrow-down-blue.png");
+      background-image: url('../images/icon-arrow-down-blue.png');
       background-repeat: no-repeat;
       background-size: 13px 7px;
-      content: "";
+      content: '';
       display: inline-block;
       height: 7px;
       margin-left: 50px;
@@ -560,7 +554,7 @@ button:focus {
     }
   }
   @include element(icon-check) {
-    background-image: url("../images/icon-close-gray.png");
+    background-image: url('../images/icon-close-gray.png');
     background-repeat: no-repeat;
     background-size: 15px;
     display: inline-block;
@@ -714,7 +708,7 @@ button:focus {
     background-image: radial-gradient(#7fbacd 20%, #e7f2f8 80%, #fff 100%);
     border-radius: 250%;
     bottom: 0;
-    content: "";
+    content: '';
     display: block;
     height: 250%;
     left: 50%;
@@ -767,11 +761,9 @@ button:focus {
     color: #19b9c3;
 
     &:hover {
-      background-image: linear-gradient(
-        to right,
-        $tertiary-color,
-        $primary-color
-      );
+      background-image: linear-gradient(to right,
+      $tertiary-color,
+      $primary-color);
       color: #fff;
       text-decoration: none;
     }
@@ -832,10 +824,10 @@ button:focus {
   }
 
   &::after {
-    background-image: url("../images/icon-arrow-down.png");
+    background-image: url('../images/icon-arrow-down.png');
     background-repeat: no-repeat;
     background-size: 15px;
-    content: "";
+    content: '';
     display: inline-block;
     height: 7px;
     position: absolute;
@@ -887,6 +879,9 @@ button:focus {
     &:last-child {
       border-bottom: 0;
     }
+    @media (max-width: 767px) {
+      padding: calc(20*100vw/375) 0;
+    }
   }
   @include element(button) {
     padding: 6px 22px;
@@ -905,6 +900,11 @@ button:focus {
       text-decoration: none;
     }
   }
+  @include element(title) {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
   @include modifier(show) {
     opacity: 1;
     transform: translateX(0);
@@ -914,9 +914,27 @@ button:focus {
     padding-left: 30px;
     @include modifier(item) {
       list-style: none;
+      @media (max-width: 767px) {
+        padding-top: calc(20*100vw/375);
+
+        &:not(:last-of-type) {
+          padding-bottom: calc(20*100vw/375);
+        }
+
+        &:not(:first-of-type) {
+          border-top: solid 1px #42484f;
+        }
+      }
     }
     @include modifier(link) {
       font-size: 1.2rem;
+    }
+    @media (max-width: 767px) {
+      padding-left: 0;
+      @include modifier(link) {
+        font-size: calc(22*100vw/375);
+        line-height: 1.18;
+      }
     }
   }
 }
