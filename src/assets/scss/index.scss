@@ -10,7 +10,7 @@ $list-text-color: #1e2d4c;
 
 html,
 body {
-  font-family: 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  font-family: 'Roboto', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
   font-size: 16px;
   @include media-breakpoint-up(md) {
     font-size: 18px;
