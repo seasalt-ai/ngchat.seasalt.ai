@@ -6,7 +6,7 @@
 body {
   background-color: #353b43;
   color: #fff;
-  font-family: Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-family: 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
   font-size: 15px;
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ body {
 
 .divider::before {
   background-color: #57cbcc;
-  content: "";
+  content: '';
   height: 5px;
   width: 15%;
 }

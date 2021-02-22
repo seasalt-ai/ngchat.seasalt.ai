@@ -30,7 +30,7 @@ $tts-bg-color: #1e1e1e;
 body {
   background-color: $main-bg-color;
   color: $white-color;
-  font-family: Arial, "微軟正黑體", "Microsoft JhengHei", sans-serif;
+  font-family: 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
   font-size: 15px;
   margin: 0;
   padding: 0;
@@ -63,7 +63,7 @@ body {
 
   &::before {
     background-color: $green-text-color;
-    content: "";
+    content: '';
     height: 5px;
     width: 15%;
   }
