@@ -35,6 +35,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <title>ngChat: Contact Center AI with STT, TTS, IVR and CRM</title>
+  <script src="https://assets.flex.twilio.com/releases/flex-webchat-ui/2.8.1/twilio-flex-webchat.min.js" crossorigin></script>
+  <script>
+    (() => {
+      window.addEventListener('load', () => {
+        const appConfig = {
+          accountSid:'AC41b16a5f90c65a13c4d5a3f44a0d1d79',
+          flexFlowSid:'FOadf3d4566db52c9b9f327b49bd6376f6'
+        };
+        Twilio.FlexWebChat.renderWebChat(appConfig);
+      })
+    })();
+  </script>
 </head>
 
 <body>
