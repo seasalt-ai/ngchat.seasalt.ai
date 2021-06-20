@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.18
+
+### changes:
+
+- modified Twilio's styles
+
 ## 0.0.17
 
 ### changes:

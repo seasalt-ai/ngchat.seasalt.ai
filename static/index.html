@@ -40,8 +40,21 @@
     (() => {
       window.addEventListener('load', () => {
         const appConfig = {
-          accountSid:'AC41b16a5f90c65a13c4d5a3f44a0d1d79',
-          flexFlowSid:'FOadf3d4566db52c9b9f327b49bd6376f6'
+          accountSid: 'AC41b16a5f90c65a13c4d5a3f44a0d1d79',
+          flexFlowSid: 'FOadf3d4566db52c9b9f327b49bd6376f6',
+          context: { friendlyName: 'Customer', isWebchatDemo: true },
+          colorTheme: {
+            overrides: {
+              EntryPoint: {
+                Container: {
+                  background: '#F22F46',
+                  color: '#FFFFFF',
+                  '&:hover': { backgroundColor: '#DE2137' },
+                },
+              },
+            },
+          },
+          fileAttachment: { enabled: true },
         };
         Twilio.FlexWebChat.renderWebChat(appConfig);
       })
